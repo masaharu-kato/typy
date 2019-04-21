@@ -8,7 +8,7 @@ include(CTest)
 enable_testing()
 
 # Executable files
-add_executable(Main main.cpp)
+add_executable(Main src/main.cpp)
 
 # Project name and version
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
