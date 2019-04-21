@@ -11,6 +11,7 @@ enable_testing()
 add_executable(Main
     src/main.cpp
     src/stream.cpp
+    src/symbol.cpp
 )
 
 # Project name and version

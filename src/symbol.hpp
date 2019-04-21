@@ -1,11 +1,34 @@
-namespace typy {
+#include "stream.hpp"
+#include <string>
+#include <functional>
+
+namespace typy::symbol {
 
     class Symbol {
-        virtual bool push(char) = 0;
     };
 
-    class WordSymbol {
+    class Word : public Symbol {
+    private:
+        std::string word;
 
+    public:
+        Word(Stream&);
+    };
+
+    class Integer : public Symbol {
+    private:
+        int value;
+
+    public:
+        Integer(Stream&);
+    };
+
+    class Double : public Symbol {
+    private:
+        double value;
+
+    public:
+        Double(Stream&);
     };
 
 }

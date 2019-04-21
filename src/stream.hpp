@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iterator>
 #include <memory>
+#include <functional>
 
 namespace typy {
 
@@ -29,6 +30,12 @@ namespace typy {
         Stream(std::ifstream& ifs, size_t index = 0);
 
         Stream& operator >>(char& c);
+        char getc();
+        void getc(char& c);
+        bool getc(char& c, std::function<bool(char)> is_valid);
+        void getc(std::string& str);
+        bool getc(std::string& str, std::function<bool(char)> is_valid);
+
         explicit operator bool() const;
         
     };
